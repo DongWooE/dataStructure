@@ -17,6 +17,7 @@ void enQueue(QueueType *cQ, element item);  //포인터 변수가 가리키는 �
 void deQueue(QueueType *cQ, element *item);  //포인터 변수가 가리키는 큐에 원소를 제거하는 함수
 void printQ(QueueType *cQ);  //포인터 변수가 가리키는 원형 큐를 출력해주는 함수
 void debugQ(QueueType *cQ);  //포인터 변수가 가리키는 원형 큐의 front, rear 와 원소를 출력해주는 함수
+void freeQueue(QueueType *cQ); //동적할당해제해주는 함수
 
 element getElement();  //원형큐에 원소를 받는 함수
 
@@ -59,7 +60,7 @@ int main(void)
 			break;  //switch 문 나가기
 		}
 	}while(command != 'q' && command != 'Q');  //command가 q 또는 Q이면 반복문 탈출
-	free(cQ);  //cQ 동적할당 해제
+	freeQueue(cQ);  //cQ 동적할당 해제
 	return 0;
 }
 
@@ -163,4 +164,8 @@ void debugQ(QueueType *cQ){  //QueueType의 포인터 변수를 인수로 받아
 	}
 	printf("front = %d, rear = %d\n", cQ->front, cQ->rear);  //멤버변수 front와 rear값을 출력
 }
+void freeQueue(QueueType *cQ){ //동적할당해제해주는 함수
 
+	printf("동적할당 해제합니다");
+	free(cQ);  //동적할당해제
+}
