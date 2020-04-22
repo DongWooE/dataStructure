@@ -124,7 +124,6 @@ void toPostfix()
 				char y = postfixPop();  //pop한 값을 문자형 y에 대입
 				charCat(&y);  //y를 PostfixExp 배열에 대입
 				}
-			postfixStack[postfixStackTop]='\0';  //stack내에서 '('삭제
 			postfixPop();  //'('을 pop해줌으로서 top-1해줌
 			}
 			else {  //lparen 과 rparen 이 아닌 다른 연산자일 때
