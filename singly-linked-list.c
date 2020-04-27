@@ -140,7 +140,7 @@ int insertNode(headNode* h, int key) {  //key값 비교 후 key값보다 큰 수
 		h -> first = temp;  //가장 첫번째 노드를 temp로
 		return 1;
 	}
-	if(lead->key>key){  //첫번째 노드의 key값보다 인수로 받은 key값이 크다면
+	if(lead->key>key){  //첫번째 노드의 key값보다 인수로 받은 key값이 작다면
 		temp->link=lead;  //temp의 다음 노드를 lead로 (기존 첫번째 노드)
 		h->first=temp;  //첫번째 노드를 temp로 함
 		return 1;
