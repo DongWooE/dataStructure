@@ -143,6 +143,7 @@ void printList(headNode* h) {  //노드값을 출력해주는 함수
 int insertLast(headNode* h, int key) {  //노드 가장 마지막 자리에 key값을 가지는 노드 삽입해주는 함수
 	listNode * temp = (listNode *)malloc(sizeof*temp);  //temp를 동적할당
 	temp -> key = key;  //temp의 key값에 인수로 받은 key값 대입
+	temp -> rlink = NULL;  //temp 다음의 자리를 null로 초기화
 	if(!(h->first)){  //비어있는 노드였을 때
 			h -> first = temp;  //첫번째 노드를 가리키는 포인터에 temp로 설정
 			return 0;
