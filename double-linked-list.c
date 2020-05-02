@@ -164,10 +164,8 @@ int deleteLast(headNode* h) {  //가장 마지막 노드를 삭제해주는 함�
 			return 0;
 		}
 	listNode * lead = h -> first;  //lead가 첫번째 노드를 가리키도록 설정
-	while(lead ->rlink !=NULL){  //lead가 마지막 노드가 되기전까지 반복
-		lead -> llink = lead;  //lead의 왼쪽 링크가 자기 자기 자신을 가리키도록 설정하고
+	while(lead ->rlink !=NULL)  //lead가 마지막 노드가 되기전까지 반복
 		lead = lead -> rlink;  //lead가 다음 노드를 가리키도록 설정
-	}
 	if(lead==(h->first)){  //lead가 첫번째 노드일 경우
 		h->first = NULL;  //첫번째 노드를 null로 설정
 		free(lead);  //lead를 동적할당해제해줌
