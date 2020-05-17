@@ -25,6 +25,7 @@ void free_postorder(Node * ptr);  //후위순회를 사용한 free함수
 
 int main()
 {
+	printf("=====[2017038069]=====[이동우]=====\n");  //학번과 이름 출력
 	char command;
 	int key;
 	Node* head = NULL;  //헤더노드 초기화
