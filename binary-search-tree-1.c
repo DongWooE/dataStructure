@@ -117,7 +117,7 @@ int initializeBST(Node** h) {  //전체 트리를 초기화해주는 함수
 
 
 
-void inorderTraversal(Node* ptr)  //전위순회 함수
+void inorderTraversal(Node* ptr)  //중위순회 함수
 {
 	if(ptr){  //ptr이 null이 아닐 때까지 반복
 		inorderTraversal(ptr->left);  //트리에서 가장 왼쪽 자식노드까지 가도록 재귀호출
@@ -126,11 +126,11 @@ void inorderTraversal(Node* ptr)  //전위순회 함수
 	}
 }
 
-void preorderTraversal(Node* ptr)  //중위순회 함수
+void preorderTraversal(Node* ptr)  //전위순회 함수
 {
 	if(ptr){  //ptr이 null이 아닐 때까지 반복
-		printf(" %d ", ptr->key);  //부모 노드를 먼저 출력
-		preorderTraversal(ptr->left);  //왼쪽 자식노드를 재귀호출
+		printf(" %d ", ptr->key);  //먼저 노드를 출력
+		preorderTraversal(ptr->left);  //가장 아래 왼쪽 노드까지 출력하면서 탐색
 		preorderTraversal(ptr->right);  //왼쪽 자식노드가 null이면 오른쪽 자식노드를 재귀호출
 	}
 }
